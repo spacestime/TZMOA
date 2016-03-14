@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="loginout" namespace="/" extends="Mydefault">
+		<action name="loginout_*" class="loginoutAction" method="{1}">
+			
+			<result name="logout">/WEB-INF/jsp/loginoutAction/logout.jsp</result>
+			<result name="toHome" type="redirect">/index.jsp</result>
+		</action>
+	</package>
+</struts>

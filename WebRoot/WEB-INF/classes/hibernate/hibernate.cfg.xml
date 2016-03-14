@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- 
+		作用：根据持久化类和映射文件生成表
+		validate 只验证，
+		create-drop 到我hibernate启动生成表，关闭删除
+		create  启动生成表
+		update	再启动hibernate容器时，检查数据是否发生变化。变化测更新
+	-->
+	<property name="hbm2ddl.auto">update</property>
+	<property name="show_sql">true</property>
+	<property name="current_session_context_class">
+		org.springframework.orm.hibernate4.SpringSessionContext
+	</property>
+	<mapping resource="cn/tzm/oa/domain/User.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Role.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Department.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Privilege.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Forum.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Reply.hbm.xml" />
+	<mapping resource="cn/tzm/oa/domain/Topic.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>

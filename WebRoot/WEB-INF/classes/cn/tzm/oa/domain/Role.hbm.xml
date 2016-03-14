@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.tzm.oa.domain">
+ <class name="Role" table="tzm_role">
+  	<id length="16" name="id">
+  	 	<generator class="native"/>
+  	</id>
+ 	<property name="name" length="64"></property>
+ 	<property name="description" length="128"></property>
+ 	
+ 	<!-- user表达了我与User的多对多的关系 -->
+ 	<set name="users" table="tzm_user_role">
+ 		<key column="roleId"></key>
+ 		<many-to-many class="User" column="userId"></many-to-many>
+ 	</set>
+ 	
+ 	<!-- privilege表达了我与Privilege的多对多的关系 -->
+ 	<set name="privileges" table="tzm_role_privilege" lazy="false">
+ 		<key column="roleId"></key>
+ 		<many-to-many class="Privilege" column="privilegeId"></many-to-many>
+ 	</set>
+ 	
+ </class>
+</hibernate-mapping>

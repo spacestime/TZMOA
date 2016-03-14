@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Replace Textareas by Class Name &mdash; CKEditor Sample</title>
+	<script src="../ckeditor.js"></script>
+	<link rel="stylesheet" href="sample.css">
+</head>
+<body>
+	
+	<form action="sample_posteddata.php" method="post">
+		<p>
+			<textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+				
+			</textarea>
+		</p>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form>
+
+	<script type="text/javascript">
+				var oFCKeditor = new CKeditor( 'content' ) ; // 参数就是提交表单时的参数名
+				
+				// 必须要指定的属性。
+				//用于指定fckeditor的核心文件的存放路径（editor文件夹所在的路径）。
+				// 要求一定要以'/'结尾。
+				oFCKeditor.BasePath	= "./"; 
+
+				// 一些配置
+				oFCKeditor.Height	= 300 ;
+				oFCKeditor.Width	= 700 ;
+				oFCKeditor.Value	= 'itcast' ;
+				oFCKeditor.ToolbarSet = "bbs"; // 提定工具栏的功能项配置，默认是Default
+				
+				// oFCKeditor.Create() ; // 创建FCKeditor并在当前位置显示出来。
+				oFCKeditor.ReplaceTextarea(); // 替换指定的textarea为FCKeditor
+			</script>
+
+	
+</body>
+</html>
