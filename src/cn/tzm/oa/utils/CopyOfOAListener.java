@@ -3,7 +3,7 @@ package cn.tzm.oa.utils;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.ejb.PostActivate;
+//import javax.ejb.PostActivate;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

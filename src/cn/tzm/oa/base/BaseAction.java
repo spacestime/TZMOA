@@ -3,7 +3,6 @@ package cn.tzm.oa.base;
 import java.lang.reflect.ParameterizedType;
 
 import javax.annotation.Resource;
-
 import org.apache.struts2.ServletActionContext;
 
 import cn.tzm.oa.domain.User;
@@ -15,7 +14,6 @@ import cn.tzm.oa.service.TopicService;
 import cn.tzm.oa.service.UserService;
 import cn.tzm.oa.service.PrivilegeService;
 
-import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
