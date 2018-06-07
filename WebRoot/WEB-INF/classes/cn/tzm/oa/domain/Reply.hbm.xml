@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="cn.tzm.oa.domain">
- <class name="Reply" table="tzm_reply">
+ <class name="Reply" table="test_reply">
 	<id name="id">
 		<generator class="native"/>
  	</id>
