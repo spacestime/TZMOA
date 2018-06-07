@@ -4,16 +4,17 @@ import java.util.Date;
 
 /**
  * 实体：文章
+ * 
  * @author HTZM
  *
  */
 public class Article {
 	private Long id;
-	private String content;//内容（TEXT类型）
-	private Date postTime;//发表时间
+	private String content;// 内容（TEXT类型）
+	private Date postTime;// 发表时间
 	private String ipAddr;
-	
-	private User author;//作者
+
+	private User author;// 作者
 
 	public Long getId() {
 		return id;
@@ -54,5 +55,4 @@ public class Article {
 	public void setAuthor(User author) {
 		this.author = author;
 	}
-	
 }
